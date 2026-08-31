@@ -9,5 +9,6 @@ O SIGA é o projeto incremental da disciplina: a cada aula, uma nova atividade p
 | Aula | Tema | Pasta |
 |---|---|---|
 | 1 | Revisão de POO — encapsulamento, herança, composição | [`Aula1/`](Aula1/) |
+| 3 | Introdução a Padrões de Projeto e Princípios SOLID | [`Aula3/`](Aula3/) |
 
 Cada pasta contém seu próprio `README.md` com instruções específicas de como compilar e executar, além de um `EVIDENCIAS.md` com o registro das evidências pedidas na respectiva ficha de atividade.
