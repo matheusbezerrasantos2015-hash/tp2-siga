@@ -12,5 +12,6 @@ O SIGA é o projeto incremental da disciplina: a cada aula, uma nova atividade p
 | 3 | Introdução a Padrões de Projeto e Princípios SOLID | [`Aula3/`](Aula3/) |
 | 5 | Padrões Criacionais I — Factory Method e Simple Factory | [`Aula5/`](Aula5/) |
 | 6 | Padrões Criacionais II — Abstract Factory, Builder e Singleton | [`Aula6/`](Aula6/) |
+| 7 | Persistência de Dados e o Padrão DAO | [`Aula7/`](Aula7/) |
 
 Cada pasta contém seu próprio `README.md` com instruções específicas de como compilar e executar, além de um `EVIDENCIAS.md` com o registro das evidências pedidas na respectiva ficha de atividade.
