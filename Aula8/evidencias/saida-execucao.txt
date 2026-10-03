@@ -1,0 +1,32 @@
+=== SIGA - CRUD de Alunos (Etapa 1) ===
+
+--- CREATE ---
+Cadastrado: 2026001 - Maria Silva (média 8.5)
+Cadastrado: 2026002 - João Souza (média 6.0)
+Não foi possível cadastrar: Já existe aluno com a matrícula 2026001.
+Não foi possível cadastrar: Média deve estar entre 0.0 e 10.0.
+Não foi possível cadastrar: Nome é obrigatório.
+
+--- READ ---
+Alunos cadastrados (2):
+  2026001 - Maria Silva (média 8.5)
+  2026002 - João Souza (média 6.0)
+Encontrado: 2026002 - João Souza (média 6.0)
+Não foi possível consultar: Não existe aluno com a matrícula 0000000.
+
+--- Listagem devolve cópia (coleção interna protegida) ---
+Cópia alterada pela tela tem 3 alunos; o cadastro continua com 2.
+
+--- UPDATE ---
+Alterado: 2026001 - Maria Silva (média 9.0)
+Não foi possível alterar: Não existe aluno com a matrícula 0000000.
+Não foi possível alterar: Média deve estar entre 0.0 e 10.0.
+Alunos cadastrados (2):
+  2026001 - Maria Silva (média 9.0)
+  2026002 - João Souza (média 6.0)
+
+--- DELETE ---
+Excluído: matrícula 2026002
+Não foi possível excluir: Não existe aluno com a matrícula 2026002.
+Alunos cadastrados (1):
+  2026001 - Maria Silva (média 9.0)
