@@ -1,0 +1,30 @@
+=== SIGA — Aula 10: Adapter e Facade (código inicial) ===
+
+1) Importação a partir do sistema legado
+   Alunos importados: 4
+   Situação segundo o importador:
+     2024001 - Maria Silva (ativo)
+     2024002 - Joao Souza (inativo)
+     2024003 - Ana Pereira (inativo)
+     2024004 - Carlos Almeida (ativo)
+
+2) O mesmo dado, convertido por outro trecho do sistema
+   Situação segundo o relatório:
+     2024001 - Maria Silva (ativo)
+     2024002 - Joao Souza (inativo)
+     2024003 - Ana Pereira (ativo)
+     2024004 - Carlos Almeida (ativo)
+   >> DESLIZE 1: a aluna 2024003 aparece INATIVA acima e ATIVA aqui.
+      A conversão existe em dois lugares, e as versões divergiram.
+   >> DESLIZE 2: o importador depende da classe concreta do legado.
+
+3) Matrícula pela tela
+   [e-mail] Confirmação enviada a Maria Silva: Maria Silva em DSM-2A (desconto de 50%)
+   [tela] Matrícula realizada: Maria Silva em DSM-2A (desconto de 50%)
+   [tela] Erro: CPF inválido.
+   [tela] Erro: Aluno não encontrado: 2024009
+   [tela] Erro: Turma sem vagas: DSM-2B
+   >> DESLIZE 3: a tela precisou receber SEIS colaboradores
+      e conhecer a ordem das chamadas, que é regra de negócio.
+
+Sua tarefa: ver o README.md e a ficha de atividade prática.
