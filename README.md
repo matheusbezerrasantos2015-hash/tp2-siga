@@ -13,12 +13,12 @@ O SIGA é o projeto incremental da disciplina: a cada aula, uma nova atividade p
 | 5 | Padrões Criacionais I — Factory Method e Simple Factory | [`Aula5/`](Aula5/) |
 | 6 | Padrões Criacionais II — Abstract Factory, Builder e Singleton | [`Aula6/`](Aula6/) |
 | 7 | Persistência de Dados e o Padrão DAO | [`Aula7/`](Aula7/) |
-| 8 | Persistência de Dados e o Padrão DAO | [`Aula8/`](Aula8/) |
-| 9 | Persistência de Dados e o Padrão DAO | [`Aula9/`](Aula9/) |
-| 10 | Persistência de Dados e o Padrão DAO | [`Aula10/`](Aula10/) |
-| 11 | Persistência de Dados e o Padrão DAO | [`Aula11/`](Aula11/) |
-| 12 | Persistência de Dados e o Padrão DAO | [`Aula12/`](Aula12/) |
-| 13 | Persistência de Dados e o Padrão DAO | [`Aula13/`](Aula13/) |
-| 0 | Prova Pratica Biblioteca | [`Aula7/`](Aula7/) |
+| 8 | CRUD completo | [`Aula8/`](Aula8/) |
+| 9 |  | [`Aula9/`](Aula9/) |
+| 10 | Aula 10: Adapter e Facade | [`Aula10/`](Aula10/) |
+| 11 | Aula 11: Decorator e Composite | [`Aula11/`](Aula11/) |
+| 12 | Aula 12: Strategy e Observer | [`Aula12/`](Aula12/) |
+| 13 | Aula 13: Template Method e State | [`Aula13/`](Aula13/) |
+| 0 | Prova Pratica Biblioteca | [`prova-pratica-biblioteca/`](prova-pratica-biblioteca/) |
 
 Cada pasta contém seu próprio `README.md` com instruções específicas de como compilar e executar, além de um `EVIDENCIAS.md` com o registro das evidências pedidas na respectiva ficha de atividade.
