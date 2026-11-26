@@ -86,7 +86,7 @@ Qualquer chamada que não esteja no diagrama lança `IllegalStateException` (por
 
 | Item | Valor |
 |---|---|
-| Commit | `PREENCHER_HASH` |
+| Commit | `db8531b` |
 | Arquivos alterados | 34 |
 | O que mudou | Javadoc de contrato em 29 arquivos `.java`; novo `README.md`; `docs/adr/` com dois ADRs; `.gitignore` com `out/` e `doc/`; link do `Aula4/README.md` corrigido |
 
