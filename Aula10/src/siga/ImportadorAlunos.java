@@ -9,8 +9,10 @@ public class ImportadorAlunos {
     private final AlunoDAO dao;
 
     /**
-     * @param fonte origem dos alunos a importar
-     * @param dao   destino dos alunos importados
+     * @param fonte origem consultada a cada chamada de {@link #importar()}; o
+     *              construtor não lê nada
+     * @param dao   destino que recebe cada aluno por {@code inserir}; se a
+     *              matrícula já existir, a importação para ali
      */
     public ImportadorAlunos(FonteDeAlunos fonte, AlunoDAO dao) {
         this.fonte = fonte;

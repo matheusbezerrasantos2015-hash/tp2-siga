@@ -24,7 +24,8 @@ public abstract class EstadoMatricula {
      * Confirma a matrícula. O resultado depende do estado atual: em
      * PRE_MATRICULADA confirma, em CONFIRMADA conclui e em TRANCADA retoma.
      *
-     * @param matricula matrícula que muda de estado
+     * @param matricula matrícula que está neste estado; é nela que o estado
+     *                  chama {@code mudarPara} para trocar a situação
      * @throws IllegalStateException se o estado atual não oferece a transição
      */
     public void confirmar(Matricula matricula) {
@@ -34,7 +35,8 @@ public abstract class EstadoMatricula {
     /**
      * Tranca a matrícula; só é permitido a partir de CONFIRMADA.
      *
-     * @param matricula matrícula que muda de estado
+     * @param matricula matrícula que está neste estado; é nela que o estado
+     *                  chama {@code mudarPara} para trocar a situação
      * @throws IllegalStateException se o estado atual não oferece a transição
      */
     public void trancar(Matricula matricula) {
@@ -45,7 +47,8 @@ public abstract class EstadoMatricula {
      * Cancela a matrícula; é permitido em PRE_MATRICULADA, CONFIRMADA e
      * TRANCADA, e não nos estados finais.
      *
-     * @param matricula matrícula que muda de estado
+     * @param matricula matrícula que está neste estado; é nela que o estado
+     *                  chama {@code mudarPara} para trocar a situação
      * @throws IllegalStateException se o estado atual não oferece a transição
      */
     public void cancelar(Matricula matricula) {

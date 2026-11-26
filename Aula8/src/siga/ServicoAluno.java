@@ -39,7 +39,8 @@ public class ServicoAluno {
     /**
      * Busca um aluno que deve existir.
      *
-     * @param matricula matrícula exata do aluno
+     * @param matricula texto procurado com igualdade exata: um espaço a mais no
+     *                  fim já faz a busca falhar
      * @return o aluno cadastrado; nunca {@code null}
      * @throws NoSuchElementException se a matrícula não estiver cadastrada
      *                                (aqui a ausência é erro, diferente de
@@ -81,7 +82,8 @@ public class ServicoAluno {
     /**
      * Remove definitivamente um aluno cadastrado.
      *
-     * @param matricula matrícula do aluno a remover
+     * @param matricula matrícula de um aluno já cadastrado; a existência é
+     *                  conferida antes de remover
      * @throws NoSuchElementException se a matrícula não estiver cadastrada
      */
     public void excluir(String matricula) {

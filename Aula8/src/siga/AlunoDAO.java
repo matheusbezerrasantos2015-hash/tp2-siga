@@ -24,7 +24,9 @@ public interface AlunoDAO {
     /**
      * Procura um aluno pela matrícula.
      *
-     * @param matricula matrícula exata
+     * @param matricula matrícula procurada; a comparação diferencia maiúsculas
+     *                  de minúsculas e uma matrícula {@code null} só resulta em
+     *                  {@code null}, sem erro
      * @return o aluno encontrado ou {@code null} se não existir (aqui não há
      *         exceção; quem converte a ausência em erro é o
      *         {@link ServicoAluno})
@@ -52,7 +54,8 @@ public interface AlunoDAO {
     /**
      * Apaga o aluno da matrícula informada.
      *
-     * @param matricula matrícula do aluno a apagar
+     * @param matricula chave do aluno a apagar; precisa estar cadastrada, caso
+     *                  contrário vale a exceção abaixo
      * @throws NoSuchElementException se não existir aluno com a matrícula
      *                                informada
      */

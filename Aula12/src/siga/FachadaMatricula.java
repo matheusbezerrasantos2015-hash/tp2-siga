@@ -19,8 +19,10 @@ public class FachadaMatricula {
      * Cria a matrícula com a política de desconto do aluno, guarda e só então
      * avisa os ouvintes.
      *
-     * @param aluno       aluno a matricular
-     * @param codigoTurma código da turma, por exemplo {@code "DSM-2A"}
+     * @param aluno       aluno cuja política de desconto é escolhida na hora;
+     *                    mudar o aluno depois não muda o desconto já escolhido
+     * @param codigoTurma código da turma, por exemplo {@code "DSM-2A"}; é só
+     *                    guardado, sem conferir se a turma existe
      * @param turmaLotada informado por quem chama e apenas repassado aos
      *                    ouvintes; esta classe não controla vagas
      * @return a matrícula gravada. A falha de um ouvinte não desfaz a

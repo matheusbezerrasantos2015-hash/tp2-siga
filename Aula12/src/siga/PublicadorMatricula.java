@@ -13,7 +13,9 @@ public class PublicadorMatricula {
      * registro. Um ouvinte registrado durante uma publicação só é avisado a
      * partir da publicação seguinte.
      *
-     * @param ouvinte ouvinte a avisar; não pode ser {@code null}
+     * @param ouvinte quem será avisado a cada matrícula; não pode ser
+     *                {@code null}. Registrar o mesmo ouvinte duas vezes faz com
+     *                que ele seja avisado duas vezes
      */
     public void registrar(OuvinteMatricula ouvinte) {
         ouvintes.add(ouvinte);

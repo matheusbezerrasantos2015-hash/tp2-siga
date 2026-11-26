@@ -10,8 +10,10 @@ public class Matricula {
     /**
      * Cria a matrícula no estado inicial, PRE_MATRICULADA.
      *
-     * @param aluno       aluno matriculado
-     * @param codigoTurma código da turma, por exemplo {@code "DSM-2A"}
+     * @param aluno       aluno que está sendo matriculado; é guardado como veio,
+     *                    sem validação
+     * @param codigoTurma código da turma, por exemplo {@code "DSM-2A"}; é só
+     *                    guardado, sem conferir se a turma existe
      */
     public Matricula(Aluno aluno, String codigoTurma) {
         this.aluno = aluno;
