@@ -7,6 +7,12 @@ public class Matricula {
     private final String codigoTurma;
     private EstadoMatricula estado = new PreMatriculada();
 
+    /**
+     * Cria a matrícula no estado inicial, PRE_MATRICULADA.
+     *
+     * @param aluno       aluno matriculado
+     * @param codigoTurma código da turma, por exemplo {@code "DSM-2A"}
+     */
     public Matricula(Aluno aluno, String codigoTurma) {
         this.aluno = aluno;
         this.codigoTurma = codigoTurma;
@@ -20,18 +26,41 @@ public class Matricula {
         return codigoTurma;
     }
 
+    /**
+     * @return nome da situação atual: PRE_MATRICULADA, CONFIRMADA, TRANCADA,
+     *         CONCLUIDA ou CANCELADA
+     */
     public String getSituacao() {
         return estado.getNome();
     }
 
+    /**
+     * Avança a matrícula. O efeito depende da situação: PRE_MATRICULADA passa
+     * a CONFIRMADA, CONFIRMADA passa a CONCLUIDA (o segundo confirmar conclui)
+     * e TRANCADA volta a CONFIRMADA.
+     *
+     * @throws IllegalStateException se a matrícula estiver CONCLUIDA ou
+     *                               CANCELADA
+     */
     public void confirmar() {
         estado.confirmar(this);
     }
 
+    /**
+     * Suspende a matrícula.
+     *
+     * @throws IllegalStateException se a situação não for CONFIRMADA
+     */
     public void trancar() {
         estado.trancar(this);
     }
 
+    /**
+     * Cancela a matrícula; o cancelamento é definitivo.
+     *
+     * @throws IllegalStateException se a matrícula já estiver CONCLUIDA ou
+     *                               CANCELADA
+     */
     public void cancelar() {
         estado.cancelar(this);
     }

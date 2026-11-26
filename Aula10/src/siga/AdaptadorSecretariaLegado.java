@@ -20,10 +20,20 @@ public class AdaptadorSecretariaLegado implements FonteDeAlunos {
 
     private final SecretariaLegadoWS servicoLegado;
 
+    /** @param servicoLegado serviço da outra equipe, que não pode ser alterado */
     public AdaptadorSecretariaLegado(SecretariaLegadoWS servicoLegado) {
         this.servicoLegado = servicoLegado;
     }
 
+    /**
+     * Converte cada linha do legado em um {@link Aluno}.
+     *
+     * @return os alunos na ordem do legado. A situação "A" ou "a" vira ativo;
+     *         qualquer outro valor vira inativo. O legado não informa se o
+     *         aluno é bolsista, então todos chegam como não bolsistas
+     * @throws ArrayIndexOutOfBoundsException se alguma linha do legado tiver
+     *                                        menos de três colunas
+     */
     @Override
     public List<Aluno> obterAlunos() {
         List<Aluno> alunos = new ArrayList<>();

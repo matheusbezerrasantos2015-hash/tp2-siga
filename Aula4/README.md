@@ -6,7 +6,7 @@ Esta pasta contém a entrega da **Atividade Prática da Aula 4**, que modela em 
 
 ## Conteúdo
 
-- [`diagrama-siga.md`](diagrama-siga.md) — diagrama de classes do domínio (Pessoa, Aluno, Professor, Turma, Disciplina, Matricula e a interface Desconto) e diagrama de sequência do cálculo da mensalidade. Os blocos Mermaid são renderizados automaticamente pelo GitHub ao visualizar o arquivo.
+- [`aula4-diagrama.md`](aula4-diagrama.md) — diagrama de classes do domínio (Pessoa, Aluno, Professor, Turma, Disciplina, Matricula e a interface Desconto) e diagrama de sequência do cálculo da mensalidade. Os blocos Mermaid são renderizados automaticamente pelo GitHub ao visualizar o arquivo.
 
 ## O que foi modelado
 

@@ -6,6 +6,14 @@ package siga;
  */
 public class SeletorPoliticaDesconto {
 
+    /**
+     * @param aluno aluno cuja política será escolhida; não pode ser
+     *              {@code null}
+     * @return uma política nova, nunca {@code null}. Os descontos <b>não se
+     *         acumulam</b>: vale a primeira condição verdadeira, na ordem
+     *         bolsista (50%), servidor (20%), egresso (10%); sem nenhuma, a
+     *         política {@link SemDesconto}
+     */
     public PoliticaDesconto escolherPara(Aluno aluno) {
         if (aluno.isBolsista()) {
             return new DescontoBolsista();

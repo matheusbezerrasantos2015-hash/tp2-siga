@@ -13,10 +13,22 @@ public class ControleVagas {
         vagasPorTurma.put("DSM-2B", 0);
     }
 
+    /**
+     * @param codigoTurma código da turma
+     * @return {@code true} se restar ao menos uma vaga; turma que não existe
+     *         devolve {@code false}. As vagas iniciais são fixas no
+     *         construtor: DSM-2A com 2 e DSM-2B com 0
+     */
     public boolean haVaga(String codigoTurma) {
         return vagasPorTurma.getOrDefault(codigoTurma, 0) > 0;
     }
 
+    /**
+     * Consome uma vaga da turma.
+     *
+     * @param codigoTurma código da turma
+     * @throws IllegalStateException se a turma não tiver vaga ou não existir
+     */
     public void reservar(String codigoTurma) {
         int restantes = vagasPorTurma.getOrDefault(codigoTurma, 0);
         if (restantes <= 0) {

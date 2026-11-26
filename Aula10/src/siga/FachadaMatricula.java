@@ -30,8 +30,25 @@ public class FachadaMatricula {
     }
 
     /**
+     * Matricula um aluno em uma turma, executando todos os passos na ordem:
+     * valida o CPF, localiza o aluno, confere a vaga, calcula o desconto,
+     * grava, reserva a vaga e envia a confirmação.
+     *
+     * @param matricula   matrícula do aluno, que já deve estar cadastrado
+     * @param cpf         CPF informado; só se confere se há 11 dígitos
+     *                    (pontos e traço são ignorados). Os dígitos
+     *                    verificadores <b>não</b> são calculados e o CPF não
+     *                    é comparado com nenhum dado do aluno
+     * @param codigoTurma código da turma, por exemplo {@code "DSM-2A"};
+     *                    turma desconhecida é tratada como turma sem vagas
+     * @return a matrícula gravada, com 50% de desconto se o aluno for
+     *         bolsista e sem desconto nos demais casos
      * @throws IllegalArgumentException se o CPF for inválido
-     * @throws IllegalStateException    se o aluno não existir ou a turma não tiver vagas
+     * @throws IllegalStateException    se o aluno não existir ou a turma não
+     *                                  tiver vagas; nesses casos nada foi
+     *                                  gravado. Se falhar depois da gravação
+     *                                  (na notificação), a matrícula e a vaga
+     *                                  já foram efetivadas e nada é desfeito
      */
     public Matricula matricular(String matricula, String cpf, String codigoTurma) {
         if (!validadorCpf.valido(cpf)) {

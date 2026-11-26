@@ -16,12 +16,19 @@ public class ServicoAluno {
 
     private final AlunoDAO dao;
 
+    /** @param dao armazenamento usado pelo serviço; não pode ser {@code null} */
     public ServicoAluno(AlunoDAO dao) {
         this.dao = dao;
     }
 
     /**
-     * @throws IllegalArgumentException se os dados do aluno forem inválidos
+     * Cadastra um aluno novo depois de validá-lo.
+     *
+     * @param aluno aluno com nome e matrícula preenchidos (texto só com
+     *              espaços conta como vazio) e média entre 0 e 10, extremos
+     *              incluídos
+     * @throws IllegalArgumentException se o aluno for {@code null} ou algum
+     *                                  dado for inválido
      * @throws IllegalStateException    se a matrícula já estiver cadastrada
      */
     public void cadastrar(Aluno aluno) {
@@ -30,7 +37,13 @@ public class ServicoAluno {
     }
 
     /**
+     * Busca um aluno que deve existir.
+     *
+     * @param matricula matrícula exata do aluno
+     * @return o aluno cadastrado; nunca {@code null}
      * @throws NoSuchElementException se a matrícula não estiver cadastrada
+     *                                (aqui a ausência é erro, diferente de
+     *                                {@link AlunoDAO#buscarPorMatricula})
      */
     public Aluno consultar(String matricula) {
         Aluno aluno = dao.buscarPorMatricula(matricula);
@@ -41,11 +54,21 @@ public class ServicoAluno {
         return aluno;
     }
 
+    /**
+     * @return cópia da lista de alunos, na ordem de cadastro; vazia se não
+     *         houver nenhum
+     */
     public List<Aluno> listar() {
         return dao.listarTodos();
     }
 
     /**
+     * Substitui os dados de um aluno já cadastrado.
+     *
+     * @param aluno aluno com os dados novos e a matrícula de quem será
+     *              alterado; como {@link Aluno} é imutável, o objeto inteiro
+     *              é trocado e a matrícula não pode mudar. Passa pelas mesmas
+     *              validações de {@link #cadastrar(Aluno)}
      * @throws IllegalArgumentException se os dados do aluno forem inválidos
      * @throws NoSuchElementException   se a matrícula não estiver cadastrada
      */
@@ -56,6 +79,9 @@ public class ServicoAluno {
     }
 
     /**
+     * Remove definitivamente um aluno cadastrado.
+     *
+     * @param matricula matrícula do aluno a remover
      * @throws NoSuchElementException se a matrícula não estiver cadastrada
      */
     public void excluir(String matricula) {

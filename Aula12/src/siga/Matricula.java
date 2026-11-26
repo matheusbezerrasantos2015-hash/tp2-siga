@@ -21,6 +21,10 @@ public class Matricula {
         return codigoTurma;
     }
 
+    /**
+     * @param valorBase mensalidade em reais, antes do desconto
+     * @return valor a pagar, calculado pela política recebida no construtor
+     */
     public double calcularValor(double valorBase) {
         return politicaDesconto.aplicar(valorBase);
     }

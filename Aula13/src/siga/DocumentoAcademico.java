@@ -19,6 +19,15 @@ public abstract class DocumentoAcademico {
         this.identificadorLog = identificadorLog;
     }
 
+    /**
+     * Emite o documento: valida o aluno, monta cabeçalho, corpo e rodapé,
+     * acrescenta a assinatura (se o documento exigir) e registra no log.
+     *
+     * @param aluno aluno que recebe o documento; precisa estar regular
+     * @return o texto do documento, com a data de hoje no rodapé
+     * @throws IllegalStateException se o aluno estiver irregular; nesse caso
+     *                               nenhum registro é feito no log
+     */
     public final String emitir(Aluno aluno) {
         validar(aluno);
 
